@@ -4,11 +4,7 @@ def call(){
 	def deploy = "T1"
 	def techno = "Another Test"
 	echo "New Logic"
-	sh """
-	cat >> ./${appName}-prop.file <<EOF
-	name=${appName}
-	operation=${deploy}
-	tech=${techno}
-	trigger="ranganath"
-	"""
+	def loadProp = libraryResource "scriptfile.sh"
+	writeFile file: "scriptfile.sh", text: loadProp
+	sh "./scriptfile.sh ${appName} ${deploy} ${techno} ranganath"
 }
