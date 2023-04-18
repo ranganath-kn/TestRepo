@@ -1,6 +1,6 @@
 #!/bin/bash
-cat >> ./${appName}-prop.file <<EOF
-name=${appName}
-operation=${deploy}
-tech=${techno}
-trigger="ranganath"
+cat >> ./$1-prop.file <<EOF
+name=$1
+operation=$2
+tech=$3
+trigger=$4
