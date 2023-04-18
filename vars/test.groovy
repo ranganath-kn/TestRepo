@@ -9,6 +9,6 @@ def call(){
 	name=${appName}
 	operation=${deploy}
 	tech=${techno}
-	trigger=${BUILD_USER_ID}
+	trigger="ranganath"
 	"""
 }
