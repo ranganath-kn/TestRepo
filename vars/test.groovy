@@ -6,5 +6,6 @@ def call(){
 	echo "New Logic"
 	def loadProp = libraryResource "scriptfile.sh"
 	writeFile file: "scriptfile.sh", text: loadProp
+	sh "chmod +x scriptfile.sh"
 	sh "./scriptfile.sh ${appName} ${deploy} ${techno} ranganath"
 }
